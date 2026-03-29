@@ -1,0 +1,32 @@
+{
+    "night":
+    {
+        "time":["0:0", "7:59"],
+        "theme": "dark",
+        "file": "night.jpg"
+    },
+    "morning":
+    {
+        "time":["8:0", "11:59"],
+        "theme": "light",
+        "file": "morning.jpg"
+    },
+    "day":
+    {
+        "time": ["12:0", "15:59"],
+        "theme": "light",
+        "file": "day.jpg"
+    },
+    "evening":
+    {
+        "time": ["16:0", "19:59"],
+        "theme": "light",
+        "file": "evening.jpg"
+    },
+    "before_night":
+    {
+        "time": ["20:0", "23:59"],
+        "theme": "dark",
+        "file": "before_night.jpg"
+    }
+}

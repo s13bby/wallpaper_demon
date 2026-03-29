@@ -1,0 +1,21 @@
+[Unit]
+Description=Wallpaper Auto-Switcher Daemon
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/.local/share/wallpaper-daemon
+ExecStart=%h/.local/share/wallpaper-daemon/venv/bin/python %h/.local/share/wallpaper-daemon/wallpaper_daemon.py
+Restart=on-failure
+RestartSec=30
+
+Environment=DISPLAY=:0
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus
+
+IOSchedulingClass=idle
+CPUSchedulingPolicy=idle
+Nice=19
+
+[Install]
+WantedBy=graphical-session.target
